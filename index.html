@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>LUMPSUM CALCULATOR</h1>
+    <div id="content_area">
+        <div id="input_area" class="content_section">
+
+            <div class="inputs">
+                <span>
+                    <label for="amount">Enter monthly investment amount:</label>
+                </span>
+                <span>
+                    <input type="number" id="amount" name="quantity" min="1" max="9999999">
+                </span>
+            </div>
+
+            <div class="inputs">
+                <span>
+                    <label for="term">Enter years:</label>
+                </span>
+                <span>
+                    <input type="number" id="term" name="quantity" min="1" max="200">
+                </span>
+                
+            </div>
+
+            <div class="inputs">
+                <span>
+                    <label for="roi">Enter expected return</label>
+                </span>
+                    <input type="number" id="roi" name="quantity" min="1" max="500">
+                <span>
+
+            </div>
+            <div id="calc_button_div">
+                <button id="calc_button" type="button" onclick="calc_returns()">Calculate</button>
+            </div>
+
+        </div>
+        <div id="result_area" class="content_section">
+            <div id="total_investment" class="results">
+               Investment
+            </div>
+            <div id="total_returns" class="results">
+                returns
+            </div>
+            <div id="total_value" class="results">
+                value
+            </div>
+
+            <div id="chart_container">
+                <canvas id="myChart"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+       
+
+</body>
+</html>
