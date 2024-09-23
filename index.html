@@ -9,61 +9,66 @@
     <script src="script.js" defer></script>
     
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
     <h1>LUMPSUM CALCULATOR</h1>
     <div id="content_area">
-        <div id="input_area" class="content_section">
+        <div class="inputs">
+            <div id="input_area" class="content_section">
 
-            <div class="inputs">
-                <span>
-                    <label for="amount">Enter monthly investment amount:</label>
-                </span>
-                <span>
-                    <input type="number" id="amount" name="quantity" min="1" max="9999999">
-                </span>
+                <div class="input_labels">
+                    <div>
+                        <label for="amount">Enter monthly investment amount:</label>
+                    </div>
+                    <div>
+                        <label for="term">Enter years:</label>
+                    </div>
+                    <div>
+                        <label for="roi">Enter expected return</label>
+                    </div>
+                    
+                </div>
+
+                <div class="input_forms">
+                    <div>
+                        <input type="number" id="amount" name="quantity" min="1" max="9999999">
+                    </div>
+                    <div>
+                        <input type="number" id="term" name="quantity" min="1" max="200">
+                    </div>
+                    <div>
+                        <input type="number" id="roi" name="quantity" min="1" max="500">
+                    </div>
+                    
+                </div>
+                <div id="calc_button_div">
+                    <button id="calc_button" type="button" onclick="calc_returns()">Calculate</button>
+                </div>
+
             </div>
-
-            <div class="inputs">
-                <span>
-                    <label for="term">Enter years:</label>
-                </span>
-                <span>
-                    <input type="number" id="term" name="quantity" min="1" max="200">
-                </span>
-                
-            </div>
-
-            <div class="inputs">
-                <span>
-                    <label for="roi">Enter expected return</label>
-                </span>
-                    <input type="number" id="roi" name="quantity" min="1" max="500">
-                <span>
-
-            </div>
-            <div id="calc_button_div">
-                <button id="calc_button" type="button" onclick="calc_returns()">Calculate</button>
-            </div>
-
         </div>
         <div id="result_area" class="content_section">
             <div id="total_investment" class="results">
-               Investment
+               Total investment
             </div>
             <div id="total_returns" class="results">
-                returns
+                Total returns
             </div>
             <div id="total_value" class="results">
-                value
+                Total value
             </div>
-
-            <div id="chart_container">
-                <canvas id="myChart"></canvas>
+            <div id="percentage_returns" class="results">
+                Percentage returns
             </div>
-
         </div>
+
+        <div id="chart_container">
+            <canvas id="myChart"></canvas>
+        </div>
+
     </div>
 
        
