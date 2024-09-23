@@ -1,61 +1,94 @@
-#content_area {
-    display: flex;
-    flex-direction: row;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.content_section{
+#content_area {
+    display: flex;
+    flex-direction: row; /* Keeps the content in a row */
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    border-radius: 34px;
+    background: #ffffff;
+    box-shadow: -15px 15px 53px #afafaf, 15px -15px 53px #ffffff;
+}
+
+.content_section {
     margin: 10px;
-    width : 750px;
-    height: 750px;
+    width: 350px; /* Adjusted width to fit better */
+    height: auto; /* Adjusted height to be dynamic */
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-}
-
-.inputs{
-    margin-left: 20px;
-    margin-top: 5px;
     padding: 20px;
-    padding-bottom: 5px;
 }
 
-.results{
-    margin: 10px;
-    margin-bottom: 5px;
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Space between inputs */
+}
+
+.input_labels, .input_forms {
+    width: 300px;
+    margin: 5px 0; /* Less margin for a cleaner look */
+}
+
+.input_forms {
+    width: 100px;
+    margin: 5px 0; /* Less margin for a cleaner look */
+}
+
+.results {
+    width: 150px;
+    margin: 10px 0;
     padding: 20px;
-    padding-bottom: 5px;
+    background: #f4f4f4; /* Background for distinction */
+    border-radius: 10px;
 }
 
-#input_area{
-    width: 700px;
-    height: 500px;
-    border-radius: 34px;
-    background: #ffffff;
-    box-shadow:  -15px 15px 53px #afafaf,
-             15px -15px 53px #ffffff;
+#input_area {
+    width: 100%;
+    flex-direction: row; /* Changed to column */
+    align-items: flex-start; /* Align content to the start */
 }
 
-#result_area{
-    width: 700px;
-    height: 500px;
-    border-radius: 34px;
-    background: #ffffff;
-    box-shadow:  15px 15px 53px #afafaf,
-             -15px -15px 53px #ffffff;
+#calc_button_div {
+    display: flex;
+    justify-content: flex-start; /* Align button to the start */
+    margin-top: 20px; /* Space above the button */
 }
 
-#chart_container{
-    width: 50%;
-    height: 400px;
-    margin: auto;
-}
-
-#calc_button{
-    margin-left: 25px;
-    margin-top: 10px;
+#calc_button {
     width: 120px;
-    border-color: aquamarine;
-    border-style: solid;
+    padding: 10px;
+    background-color: #3498db; /* Button color */
+    color: #fff;
+    border: none;
     border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+#calc_button:hover {
+    background-color: #2980b9; /* Hover color */
+}
+
+#result_area {
+    width: 50%; /* Restrict width for a clean layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#chart_container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px; /* Space above chart */
+}
+
+#myChart {
+    width: 100%; /* Full width for better visibility */
+    height: 400px;
 }
